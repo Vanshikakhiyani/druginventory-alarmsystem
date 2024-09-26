@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Inventory System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Drug Inventory Management System</h1>
+    
+    <h2>Add Drug</h2>
+    <form id="addDrugForm">
+        <input type="text" id="drugName" placeholder="Drug Name" required>
+        <input type="text" id="batchNumber" placeholder="Batch Number" required>
+        <input type="date" id="manufactureDate" required>
+        <input type="date" id="expiryDate" required>
+        <input type="text" id="supplierId" placeholder="Supplier ID" required>
+        <input type="text" id="supplierName" placeholder="Supplier Name" required>
+        <input type="date" id="supplyDate" required>
+        <input type="text" id="purchaseOrderId" placeholder="Purchase Order ID" required>
+        <input type="number" id="quantity" placeholder="Quantity" required>
+        <input type="text" id="warehouseId" placeholder="Warehouse ID" required>
+        <input type="text" id="warehouseLocation" placeholder="Warehouse Location" required>
+        <input type="date" id="stockInDate" required>
+        <input type="number" id="currentStockLevel" placeholder="Current Stock Level" required>
+        <input type="text" id="predictedExpiryRisk" placeholder="Predicted Expiry Risk" required>
+        <button type="submit">Add Drug</button>
+    </form>
+
+    <h2>Drugs List</h2>
+    <ul id="drugsList"></ul>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
